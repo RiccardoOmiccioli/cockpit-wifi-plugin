@@ -28,6 +28,7 @@ export default defineComponent({
   <div id="app">
     <h1>Cockpit Wi-Fi Plugin</h1>
     <button @click="fetchHostname">Get Hostname</button>
+    <Button label="Hello World" />
     <p>{{ hostname }}</p>
   </div>
 </template>

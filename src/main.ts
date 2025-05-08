@@ -1,5 +1,17 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import PrimeVue from 'primevue/config';
+import Material from '@primeuix/themes/material';
+import Button from 'primevue/button';
+import './style.css';
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+app.use(PrimeVue, {
+    theme: {
+        preset: Material
+    }
+});
+app.component('Button', Button);
+
+app.mount('#app');
