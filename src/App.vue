@@ -8,11 +8,11 @@ export default defineComponent({
 
     const fetchHostname = async () => {
       try {
-        console.log(cockpit);
         const response = await cockpit.file('/etc/hostname').read();
         hostname.value = response.trim();
       } catch (error) {
         hostname.value = 'Failed to fetch hostname';
+        console.error(error);
       }
     };
 
